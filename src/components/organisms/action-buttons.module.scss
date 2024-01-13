@@ -1,0 +1,7 @@
+.actionButtons {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 3fr 3fr 2fr;
+  column-gap: 8px;
+}

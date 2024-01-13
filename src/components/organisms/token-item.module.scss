@@ -1,0 +1,40 @@
+.token {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $Wallet-secondary;
+  }
+}
+
+.tokenInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.tokenDescription {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #8e8e93;
+  }
+}
+
+.tokenBalance {
+  color: #000;
+  font-size: 17px;
+}

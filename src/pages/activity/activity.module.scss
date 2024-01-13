@@ -1,0 +1,70 @@
+.main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.images {
+  position: relative;
+}
+.iconType {
+  position: absolute;
+  bottom: 0px;
+  right: -3px;
+}
+
+.token {
+  width: 100%;
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $Wallet-secondary;
+  }
+}
+
+.tokenInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.tokenDescription {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #8e8e93;
+  }
+}
+
+.balanceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.tokenBalance {
+  color: #000;
+  font-size: 17px;
+}
+
+.deposit {
+  color: #00b83e;
+}
+.date {
+  font-size: 14px;
+  color: #8e8e93;
+}

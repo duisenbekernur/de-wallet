@@ -1,0 +1,26 @@
+.deButton {
+  display: flex;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  background: $Wallet-primary;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+
+  height: 50px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.plain {
+  background: $Wallet-secondary;
+  color: $Wallet-primary;
+}
