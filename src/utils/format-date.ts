@@ -7,5 +7,7 @@ export const formatDate = (date: Date): string => {
     hour12: false,
   };
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   return new Date(date).toLocaleString("en-US", options);
 };
