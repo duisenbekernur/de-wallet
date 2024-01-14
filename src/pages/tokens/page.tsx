@@ -35,7 +35,9 @@ export default function Tokens() {
 
       {tokens.length > 0 &&
         !loading &&
-        tokens.map((token, index) => <TokenItem key={index} token={token} />)}
+        [...tokens, ...tokens, ...tokens, ...tokens].map((token, index) => (
+          <TokenItem key={index} token={token} />
+        ))}
     </main>
   );
 }

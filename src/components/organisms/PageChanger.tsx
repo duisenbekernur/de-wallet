@@ -4,18 +4,19 @@ import { useLocation } from "react-router-dom";
 
 export default function PageChanger() {
   const { pathname } = useLocation();
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <div className={styles.pageChanger}>
       <DePageChangerItem
-        href={"/tokens"}
+        href={baseUrl + "tokens"}
         text={"Tokens"}
-        active={pathname === "/tokens"}
+        active={pathname === baseUrl + "tokens"}
       />
       <DePageChangerItem
-        href={"/activity"}
+        href={baseUrl + "activity"}
         text={"Activity"}
-        active={pathname === "/activity"}
+        active={pathname === baseUrl + "activity"}
       />
     </div>
   );

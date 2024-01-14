@@ -6,17 +6,17 @@ import ActivityPage from "../pages/activity/page.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/de-wallet",
     element: <App />,
 
     children: [
       {
-        path: "/tokens",
+        path: "tokens",
         element: <TokensPage />,
       },
 
       {
-        path: "/activity",
+        path: "activity",
         element: <ActivityPage />,
       },
     ],

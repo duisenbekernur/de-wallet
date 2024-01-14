@@ -1,4 +1,5 @@
 import styles from "./header.module.scss";
+import {generateImageUrl} from "../../utils/generate-img-url.ts";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
         <p>bot</p>
       </div>
 
-      <img src={"/icons/more.png"} alt={"more"} />
+      <img src={generateImageUrl("/icons/more.png")} alt={"more"} />
     </header>
   );
 }

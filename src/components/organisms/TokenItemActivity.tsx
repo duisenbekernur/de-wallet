@@ -4,6 +4,7 @@ import cls from "classnames";
 import { ITokenActivity } from "../../types.ts";
 import { useCallback } from "react";
 import { formatDate } from "../../utils/format-date.ts";
+import { generateImageUrl } from "../../utils/generate-img-url.ts";
 
 interface IProps {
   token: ITokenActivity;
@@ -15,10 +16,13 @@ export default function TokenItemActivity({ token }: IProps) {
   return (
     <div key={token.from || token.to} className={styles.token}>
       <div className={styles.images}>
-        <img src={"/icons/" + token.token?.icon} alt={token.icon} />
+        <img
+          src={generateImageUrl("/icons/" + token.token?.icon)}
+          alt={token.icon}
+        />
         <img
           className={styles.iconType}
-          src={"/icons/" + token.type.toLowerCase() + ".png"}
+          src={generateImageUrl("/icons/" + token.type.toLowerCase() + ".png")}
           alt={token.type}
         />
       </div>

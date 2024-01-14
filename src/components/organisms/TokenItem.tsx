@@ -1,5 +1,6 @@
 import styles from "./token-item.module.scss";
 import { IToken } from "../../types.ts";
+import { generateImageUrl } from "../../utils/generate-img-url.ts";
 
 interface IProps {
   token: IToken;
@@ -8,7 +9,7 @@ interface IProps {
 export default function TokenItem({ token }: IProps) {
   return (
     <div key={token.id} className={styles.token}>
-      <img src={"/icons/" + token.icon} alt={token.icon} />
+      <img src={generateImageUrl("/icons/" + token.icon)} alt={token.icon} />
       <div className={styles.tokenInfo}>
         <div className={styles.tokenDescription}>
           <h3>{token.title}</h3>

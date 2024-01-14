@@ -10,16 +10,18 @@ import PageChangerLoading from "./components/organisms/PageChangerLoading.tsx";
 import WalletBalance from "./components/organisms/WalletBalance.tsx";
 import WalletBalanceLoading from "./components/organisms/WalletBalanceLoading.tsx";
 import Header from "./components/organisms/Header.tsx";
+import Footer from "./components/organisms/Footer.tsx";
 
 export default function App() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const baseUrl = import.meta.env.BASE_URL;
 
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/") {
-      navigate("/tokens");
+    if (pathname === baseUrl) {
+      navigate("tokens");
     }
 
     setLoading(true);
@@ -45,6 +47,8 @@ export default function App() {
 
         <Outlet />
       </section>
+
+      <Footer />
     </main>
   );
 }
